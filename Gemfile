@@ -36,10 +36,43 @@ end
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
-# Use Capistrano for deployment
-# gem 'capistrano', group: :development
 
-# Use debugger
-# gem 'debugger', group: [:development, :test]
+# Use Devise
+gem 'devise'
+
+group :development do
+  gem 'bullet'
+
+  # Use Capistrano for deployment
+  gem 'capistrano'
+
+  gem 'better_errors'
+
+  # Use debugger
+  gem 'debugger'
+end
+
+group :test do
+  # Use Rspec
+  gem 'rspec-rails'
+
+  gem 'factory_girl_rails'
+end
+
+group :assets do
+  gem 'bourbon'
+  gem 'compass-rails'
+end
+
+gem 'anjlab-bootstrap-rails', require: 'bootstrap-rails', github: 'anjlab/bootstrap-rails', branch: '3.0.0'
+
+gem 'active_model_serializers'
+
+# Bunch of cool gems
+gem 'httparty'
+gem 'kaminari'
+gem 'newrelic_rpm'
+gem 'whenever'
+gem 'sidekiq'
