@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
-# Use postgresql as the database for Active Record
+# Use postgresql as the production database for Active Record
 gem 'pg'
 
 # Use SCSS for stylesheets
@@ -42,11 +42,14 @@ gem 'unicorn'
 # Use Devise
 gem 'devise'
 
+gem 'sqlite3', group: [:development, :test]
+
 group :development do
   gem 'bullet'
 
   # Use Capistrano for deployment
   gem 'capistrano'
+
 
   gem 'better_errors'
 
